@@ -1,0 +1,21 @@
+{
+  "name": "engineering-ladder-th",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Career ladder และ tech lead playbook สำหรับทีมวิศวกรซอฟต์แวร์ในไทย",
+  "license": "CC-BY-4.0 AND MIT",
+  "author": "nuttakulsv",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuttakulsv/engineering-ladder-th.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "test": "node --test test/*.test.mjs",
+    "dev": "npm run build && python3 -m http.server 8080 --directory _site"
+  }
+}

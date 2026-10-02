@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm run check
+      - run: npm test
+
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          # Some sites block bots with 403; own URLs are excluded because they only exist after the first push.
+          args: --no-progress --exclude-loopback --accept '200..=299,403,429' --exclude-path _site --exclude '^https://nuttakulsv\.github\.io' --exclude '^https://github\.com/nuttakulsv/' './**/*.md'
+          fail: true

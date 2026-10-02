@@ -1,0 +1,23 @@
+Description:
+Thai engineering career ladder (IC L1–L5, EM M1–M3), tech lead playbook and templates, with a browser self-assessment that draws a radar chart. Fork the JSON to make your own.
+
+Website:
+https://nuttakulsv.github.io/engineering-ladder-th/
+
+Topics:
+career-ladder
+engineering-ladder
+career-framework
+engineering-management
+tech-lead
+staff-engineer
+leadership
+one-on-one
+performance-review
+promotion
+hiring
+interviewing
+postmortem
+onboarding
+thai
+thailand

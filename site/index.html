@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Engineering Ladder TH</title>
+  <meta name="description" content="ประเมินตัวเองเทียบกับ career ladder ของวิศวกรซอฟต์แวร์ ภาษาไทย สาย IC และสายบริหาร">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>Engineering Ladder TH</h1>
+      <p class="lead">ติ๊กสิ่งที่คุณทำได้อย่างสม่ำเสมอ ไม่ใช่สิ่งที่เคยทำครั้งเดียว แล้วดูว่าแต่ละมิติอยู่ตรงไหนเทียบกับระดับที่ตั้งเป้าไว้</p>
+    </div>
+    <nav class="links">
+      <a href="https://github.com/nuttakulsv/engineering-ladder-th">GitHub</a>
+      <a href="https://github.com/nuttakulsv/engineering-ladder-th/blob/main/ladder/ic.md">ladder ฉบับเต็ม</a>
+    </nav>
+  </header>
+
+  <section class="controls" aria-label="ตั้งค่า">
+    <label>สาย
+      <select id="track"></select>
+    </label>
+    <label>ระดับเป้าหมาย
+      <select id="target"></select>
+    </label>
+    <p id="level-summary" class="level-summary"></p>
+  </section>
+
+  <p id="notice" class="notice" hidden></p>
+
+  <main class="layout">
+    <section class="checklist" aria-label="พฤติกรรม">
+      <div id="dims"></div>
+    </section>
+
+    <aside class="results" aria-live="polite">
+      <div class="card">
+        <div id="radar" class="radar"></div>
+        <ul class="legend">
+          <li><span class="swatch current"></span>ตอนนี้</li>
+          <li><span class="swatch target"></span>เป้าหมาย</li>
+        </ul>
+        <p id="overall" class="overall"></p>
+        <ul id="summary" class="summary"></ul>
+        <div class="actions">
+          <button type="button" id="copy">คัดลอกลิงก์</button>
+          <button type="button" id="png">บันทึกเป็นรูป</button>
+          <button type="button" id="print">พิมพ์</button>
+          <button type="button" id="reset" class="quiet">ล้างทั้งหมด</button>
+        </div>
+        <p class="privacy">คำตอบเก็บอยู่ในลิงก์ของหน้านี้เท่านั้น ไม่ถูกส่งไปที่ไหน</p>
+      </div>
+      <div class="card">
+        <h2>สิ่งที่ยังขาดสำหรับเป้าหมาย</h2>
+        <div id="gaps"></div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="foot">
+    เนื้อหาใช้สัญญาอนุญาต <a href="https://creativecommons.org/licenses/by/4.0/deed.th">CC BY 4.0</a>
+    นำไปปรับใช้ในบริษัทได้ แค่ให้เครดิต
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
